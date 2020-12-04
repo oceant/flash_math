@@ -1,0 +1,247 @@
+/* --------------------------
+グリッド
+-------------------------- */
+
+$padding: 15px;
+$padding-wide: 30px;
+$padding-narrow: 10px;
+$padding-sp: 10px;
+
+.u-row {
+  margin: (-1)*$padding;
+  display: flex;
+  flex-wrap: wrap;
+  
+  @include view-at(sp) {
+    margin: (-1)*$padding-sp;
+  }
+
+  &--justify-between {
+    justify-content: space-between;
+  }
+
+  &--justify-center {
+    justify-content: center;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--nomargin {
+    margin: 0;
+  }
+
+  @include view-at(tab) {
+    &--nomargin-tab {
+      margin: 0;
+    }
+  }
+
+  @include view-at(sp) {
+    &--nomargin-sp {
+      margin: 0;
+    }
+  }
+
+  &--narrow {
+    margin: (-1)*$padding-narrow;
+  }
+}
+
+@for $i from 1 through 12
+{
+  $width: (100% / (12/$i));
+  .u-col-#{$i}
+  {
+      width: $width;
+      padding: $padding;
+      @include view-at(sp) {
+        padding: $padding-sp;
+      }
+  }
+
+  .u-col-offset-0
+  {
+      margin-left: 0;
+  }
+
+  .u-col-offset-#{$i}
+  {
+      margin-left: $width;
+  }
+
+  .u-row--nomargin {
+    > .u-col-#{$i}
+    {
+      padding: 0;
+    }
+  }
+
+  @include view-at(sp) {
+    .u-row--nomargin-sp {
+      > .u-col-#{$i}
+      {
+        padding: 0;
+      }
+    }
+  }
+
+  .u-row--narrow {
+    > .u-col-#{$i}
+    {
+      padding: $padding-narrow;
+    }
+  }
+}
+
+@include view-at(pc) {
+  @for $i from 1 through 12
+  {
+      $width: (100% / (12/$i));
+      .u-col-#{$i}--pc
+      {
+          width: $width;
+          padding: $padding;
+      }
+
+      .u-col-offset-0--pc
+      {
+          margin-left: 0;
+      }
+
+      .u-col-offset-#{$i}--pc
+      {
+          margin-left: $width;
+      }
+
+      .u-row--nomargin {
+        > .u-col-#{$i}--pc
+        {
+          padding: 0;
+        }
+      }
+
+      .u-row--narrow {
+        > .u-col-#{$i}--pc
+        {
+          padding: $padding-narrow;
+        }
+      }
+    }
+}
+
+@include view-at(laptop) {
+  @for $i from 1 through 12
+  {
+      $width: (100% / (12/$i));
+      .u-col-#{$i}--laptop
+      {
+          width: $width;
+          padding: $padding;
+      }
+
+      .u-col-offset-0--laptop
+      {
+          margin-left: 0;
+      }
+
+      .u-col-offset-#{$i}--laptop
+      {
+          margin-left: $width;
+      }
+
+      .u-row--nomargin {
+        > .u-col-#{$i}--laptop
+        {
+          padding: 0;
+        }
+      }
+
+      .u-row--narrow {
+        > .u-col-#{$i}--laptop
+        {
+          padding: $padding-narrow;
+        }
+      }
+  }
+}
+
+@include view-at(tab) {
+  @for $i from 1 through 12
+  {
+      $width: (100% / (12/$i));
+      .u-col-#{$i}--tab
+      {
+          width: $width;
+          padding: $padding;
+      }
+
+      .u-col-offset-0--tab
+      {
+          margin-left: 0;
+      }
+
+      .u-col-offset-#{$i}--tab
+      {
+          margin-left: $width;
+      }
+
+      .u-row--nomargin-tab {
+        > .u-col-#{$i}--tab
+        {
+          padding: 0;
+        }
+      }
+
+      .u-row--narrow {
+        > .u-col-#{$i}--tab
+        {
+          padding: $padding-narrow;
+        }
+      }
+  }
+}
+
+@include view-at(sp) {
+    @for $i from 1 through 12
+    {
+        $width: (100% / (12/$i));
+        .u-col-#{$i}--sp
+        {
+            width: $width;
+            padding: $padding;
+            @include view-at(sp) {
+              padding: $padding-sp;
+            }
+        }
+
+        .u-col-offset-0--sp
+        {
+            margin-left: 0;
+        }
+
+        .u-col-offset-#{$i}--sp
+        {
+            margin-left: $width;
+        }
+
+        .u-row--nomargin-sp {
+          > .u-col-#{$i}--sp
+          {
+            padding: 0;
+          }
+        }
+
+        .u-row--narrow {
+          > .u-col-#{$i}--sp
+          {
+            padding: $padding-narrow;
+          }
+        }
+      }
+}

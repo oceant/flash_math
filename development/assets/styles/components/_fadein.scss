@@ -1,0 +1,47 @@
+/* --------------------------
+スクロールに合わせてフェードイン
+-------------------------- */
+.c-fadein {
+  opacity: 0;
+  transition: all 1s;
+
+  &.js-active {
+    opacity: 1;
+  }
+
+  &-wrapper {
+    overflow: hidden;
+  }
+
+  &--top {
+    transform: translateY(-20%);
+
+    &.js-active {
+      transform: translateY(0);
+    }
+  }
+
+  &--bottom {
+    transform: translateY(100px);
+
+    &.js-active {
+      transform: translateY(0);
+    }
+  }
+
+  &--left {
+    transform: translateX(-100px);
+
+    &.js-active {
+      transform: translateY(0);
+    }
+  }
+
+  &--right {
+    transform: translateX(100px);
+
+    &.js-active {
+      transform: translateY(0);
+    }
+  }
+}

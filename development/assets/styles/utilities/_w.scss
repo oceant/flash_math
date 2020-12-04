@@ -1,0 +1,44 @@
+/* --------------------------
+幅指定
+-------------------------- */
+
+@for $i from 0 through 10 {
+  $width: (10% * $i);
+  .u-w#{$i * 10} {width: $width;}
+}
+
+@include view-at(pc) {
+  @for $i from 0 through 10 {
+    $width: (10% * $i);
+    .u-w#{$i * 10}--pc {width: $width;}
+  }
+}
+
+@include view-at(laptop) {
+  @for $i from 0 through 10 {
+    $width: (10% * $i);
+    .u-w#{$i * 10}--laptop {width: $width;}
+  }
+}
+
+@include view-at(tab) {
+  @for $i from 0 through 10 {
+    $width: (10% * $i);
+    .u-w#{$i * 10}--tab {width: $width;}
+  }
+}
+
+@include view-at(sp) {
+  @for $i from 0 through 10 {
+    $width: (10% * $i);
+    .u-w#{$i * 10}--sp {width: $width;}
+  }
+}
+
+.u-w730px {
+  max-width: 730px;
+}
+
+.u-h100 {
+  height: 100%;
+}

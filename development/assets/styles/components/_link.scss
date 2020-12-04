@@ -1,0 +1,59 @@
+/* --------------------------
+リンク
+-------------------------- */
+
+.c-link {
+  &--block {
+    display: block;
+    text-decoration: none;
+
+    img {
+      display: block;
+    }
+  }
+
+  &--toggle {
+    &::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid $color-blue;
+      border-right: 2px solid $color-blue;
+      transform: rotate(135deg) translate(-3px, 0);
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    &[aria-expanded=true] {
+      &::after {
+        transform: rotate3d(1,0,0,180deg);
+      }
+    }
+  }
+
+  &--pdf {
+    &::after {
+      display: inline-block;
+      content: '';
+      width: 1.2em;
+      height: 1.2em;
+      background: transparent url(/images/common/icon-pdf.svg) center center no-repeat;
+      background-size: contain;
+      margin-left: 8px;
+      transform: translateY(3px);
+    }
+  }
+
+  &--external {
+    &::after {
+      display: inline-block;
+      content: '';
+      width: 1.2em;
+      height: 1.2em;
+      background: transparent url(/images/common/icon-external.svg) center center no-repeat;
+      background-size: contain;
+      margin-left: 8px;
+      transform: translateY(3px);
+    }
+  }
+}

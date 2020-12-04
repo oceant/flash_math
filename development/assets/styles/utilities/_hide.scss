@@ -1,0 +1,33 @@
+/* --------------------------
+非表示切り替え
+-------------------------- */
+
+@include view-at(pc){
+  .u-hide-pc {
+    display: none;
+  }
+}
+
+@include view-at(tabonly) {
+  .u-hide-tabonly {
+    display: none;
+  }
+}
+
+@include view-at(tab) {
+  .u-hide-tab {
+    display: none;
+  }
+}
+
+@include view-at(laptop) {
+  .u-hide-laptop {
+    display: none;
+  }
+}
+
+@include view-at(sp) {
+  .u-hide-sp {
+    display: none;
+  }
+}

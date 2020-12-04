@@ -1,0 +1,29 @@
+/* --------------------------
+枠線
+-------------------------- */
+
+.u-border {
+  &-bottom {
+    border-bottom: 3px solid $color-green;
+    padding-bottom: 10px;
+  }
+
+  &-top {
+    border-top: 3px solid $color-green;
+    padding-top: 10px;
+  }
+
+  &-right {
+    border-right: 3px solid $color-green;
+    padding-right: 10px;
+  }
+
+  &-left {
+    border-left: 3px solid $color-green;
+    padding-left: 10px;
+  }
+
+  &--white {
+    border-color: $color-white;
+  }
+}

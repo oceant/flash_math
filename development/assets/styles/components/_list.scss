@@ -1,0 +1,122 @@
+/* --------------------------
+リスト
+-------------------------- */
+
+.c-list{
+  >li {
+    margin-bottom: 1em; 
+    line-height: 1.5;
+    position: relative;
+  }
+
+  &--point {
+    >li {
+      padding-left: 15px;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        display: inline-block;
+        background-color: $color-blue;
+        position: absolute;
+        top: 7.5px;
+        left: 0;
+      }
+    }
+  }
+
+  &--link {
+    > li {
+      padding-left: 15px;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid $color-blue;
+        border-right: 1px solid $color-blue;
+        transform: rotate(45deg);
+        display: inline-block;
+        position: absolute;
+        top: 6.5px;
+        left: 0;
+      }
+    }
+  }
+
+  &--horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include view-at(sp) {
+      display: block;
+    }
+
+    li {
+      margin-left: 20px;
+      margin-bottom: 0;
+
+      @include view-at(sp) {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--border {
+    li {
+      background-position: left 16px;
+      padding: 14px;
+      border-bottom: 1px dashed $color-blue;
+      overflow-x: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      line-height: 1;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+      a {
+        color: $color-black;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+
+  &--order {
+    padding-left: 15px;
+  }
+
+  &--note {
+    li {
+      color: $color-gray-dark;
+      position: relative;
+      padding-left: 1.2em;
+      font-size: rem(11px);
+      line-height: rem(18px);
+      margin-bottom: 0;
+
+      &::before {
+        content: '※';
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        left: 0;
+      }
+    }
+  }
+}

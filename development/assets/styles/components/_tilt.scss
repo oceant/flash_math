@@ -1,0 +1,77 @@
+/* --------------------------
+パネル
+-------------------------- */
+.c-tilt {
+  position: relative;
+  z-index: 0;
+
+  &-act {
+    &-bg {
+      margin-top: -100px;
+      background-image: url(../images/top/act-primary-bg.png);
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include view-at(tab) {
+        margin-top: -80px;
+      }
+
+      @include view-at(sp) {
+        margin-top: -40px;
+        background-image: url(../images/top/act-primary-bg-sp.png);
+      }
+    }
+  }
+
+  &-item {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    &--act {
+      &::after {
+        transform: skewY(-2.4deg);
+        transform-origin: bottom left;
+      }
+    }
+
+    &--01 {
+      &::after {
+      background: radial-gradient(#3d8289, #024a47);
+      transform: skewY(-2.4deg);
+      transform-origin: bottom left;
+      }
+    }
+
+    &--02 {
+      &::after {
+      background-color: $color-green-snow;
+      transform: skewY(-2.4deg);
+      transform-origin: bottom left;
+      }
+    }
+
+    &--03 {
+      &::after {
+      background-color: $color-white;
+      transform: skewY(-2.4deg);
+      transform-origin: bottom left;
+      }
+    }
+
+    &--04 {
+      &::after {
+      background-color: $color-green-snow;
+      transform: skewY(2.4deg);
+      transform-origin: bottom left;
+      }
+    }
+  }
+}

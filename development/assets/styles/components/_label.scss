@@ -1,0 +1,25 @@
+/* --------------------------
+ラベル
+-------------------------- */
+.c-label {
+  display: inline-block;
+  color: $color-white;
+  font-size: rem(14px);
+  font-weight: $normal;
+  line-height: 1;
+  text-align: center;
+  padding: 4px 18px;
+  background-color: $color-black;
+  border-radius: 5px;
+
+  &--small {
+    font-size: rem(10px);
+    padding: 4px 12px;
+  }
+
+  &--large {
+    font-size: rem(18px);
+    padding: 4px 20px;
+  }
+}
+

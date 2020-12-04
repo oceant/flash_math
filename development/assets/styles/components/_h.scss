@@ -1,0 +1,38 @@
+/* --------------------------
+見出し
+-------------------------- */
+
+.c-h2 {
+  font-size: rem(40px);
+  font-weight: $medium;
+  line-height: 1.8em;
+  color: $color-red;
+
+  @include view-at(sp) {
+    font-size: rem(32px);
+    letter-spacing: 0.1em;
+  }
+
+  rt {
+    font-size: rem(14px);
+    text-align: left;
+    letter-spacing: 0;
+  }
+}
+
+.c-h3 {
+  font-size: rem(26px);
+  font-weight: $medium;
+  line-height: 1.8em;
+  letter-spacing: 0.15em;
+
+  @include view-at(sp) {
+    font-size: rem(24px);
+    letter-spacing: 0.1em;
+  }
+}
+
+.c-h--center-line {
+  @include center-line();
+  margin-bottom: 5px;
+}

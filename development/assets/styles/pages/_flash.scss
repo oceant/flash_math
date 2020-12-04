@@ -1,0 +1,90 @@
+.flash {
+  &-count {
+    font-size: 160px;
+    text-align: center;
+    color: $color-text;
+
+    &.countdown {
+      color: $color-blue;
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: $color-blue;
+      border-radius: 50%;
+      text-align: center;
+      overflow: hidden;
+      z-index: 1;
+      margin: 0 auto;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -100px;
+        width: 200px;
+        height: 200px;
+        background: $color-gray-light;
+        transform-origin: right 100px;
+        z-index: 2;
+        animation: rotate-circle-left 1s linear 1s 3;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 100px;
+        width: 200px;
+        height: 200px;
+        background: $color-gray-light;
+        transform-origin: left 100px;
+        z-index: 3;
+        animation: rotate-circle-right 1s linear 1s 3;
+      }
+
+      .flash-count-inner {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 160px;
+        height: 160px;
+        padding-top: 0;
+        background: $color-base;
+        border-radius: 50%;
+        z-index: 4;
+      }
+
+
+      @keyframes rotate-circle-right {
+          0%   {
+              transform: rotate(0deg);
+              background: $color-gray-light;
+          }
+          50%  {
+              transform: rotate(180deg);
+              background: $color-gray-light;
+          }
+          50.01% {
+              transform: rotate(360deg);
+              background: $color-blue;
+          }
+          100% {
+              transform: rotate(360deg);
+              background: $color-blue;
+          }
+      }
+
+      @keyframes rotate-circle-left {
+          0%   { transform: rotate(0deg); }
+          50%  { transform: rotate(0deg); }
+          100% { transform: rotate(180deg); }
+      }
+    }
+
+    &.answer {
+      color: $color-red;
+    }
+  }
+}

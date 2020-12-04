@@ -1,0 +1,72 @@
+/* --------------------------
+ハンバーガーメニューアイコン
+-------------------------- */
+
+.c-menu {
+  display: none;
+
+  @include view-at(sp) {
+      position: absolute;
+      right: 16px;
+      top: 5px;
+      display: block;
+      padding: 0;
+      z-index: index($z, menu);
+  }
+
+  &-trigger,
+  &-trigger span {
+    display: block;
+    transition: all .2s;
+    box-sizing: border-box;
+  }
+
+  &-trigger {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    &-label {
+      position: absolute;
+      top: 27px;
+      left: 0;
+      right: 0;
+      display: block;
+      width: 100%;
+      height: auto;
+      color: $color-text;
+      font-size: 10px;
+      letter-spacing: 0;
+      text-align: center;
+      margin: auto;
+      background-color: transparent;
+      transition: all .3s;
+    }
+  }
+
+  &-trigger span {
+    position: absolute;
+    left: 5px;
+    width: 30px;
+    height: 4px;
+    background-color: $color-text;
+  }
+
+  &-trigger span:nth-of-type(1) {
+    top: 8px;
+  }
+
+  &-trigger span:nth-of-type(2) {
+    top: 17px;
+  }
+
+  &-trigger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(4px) translateX(0) rotate(-45deg);
+    transform: translateY(4px) translateX(0) rotate(-45deg);
+  }
+
+  &-trigger.active span:nth-of-type(2) {
+    -webkit-transform: translateY(-5px) translateX(-0) rotate(45deg);
+    transform: translateY(-5px) translateX(-0) rotate(45deg);
+  }
+}

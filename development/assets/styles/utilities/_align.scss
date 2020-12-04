@@ -1,0 +1,76 @@
+/* --------------------------
+テキスト整列
+-------------------------- */
+
+.u-align-left {
+  text-align: left;
+}
+
+.u-align-right {
+  text-align: right;
+}
+
+.u-align-center {
+  text-align: center;
+}
+
+.u-align-justify {
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+@include view-at(pc) {
+  .u-align-left--pc {
+    text-align: left;
+  }
+
+  .u-align-right--pc {
+    text-align: right;
+  }
+
+  .u-align-center--pc {
+    text-align: center;
+  }
+}
+
+@include view-at(laptop) {
+  .u-align-left--laptop {
+    text-align: left;
+  }
+
+  .u-align-right--laptop {
+    text-align: right;
+  }
+
+  .u-align-center--laptop {
+    text-align: center;
+  }
+}
+
+@include view-at(tab) {
+  .u-align-left--tab {
+    text-align: left;
+  }
+
+  .u-align-right--tab {
+    text-align: right;
+  }
+
+  .u-align-center--tab {
+    text-align: center;
+  }
+}
+
+@include view-at(sp) {
+  .u-align-left--sp {
+    text-align: left;
+  }
+
+  .u-align-right--sp {
+    text-align: right;
+  }
+
+  .u-align-center--sp {
+    text-align: center;
+  }
+}

@@ -1,0 +1,30 @@
+/* --------------------------
+背景色
+-------------------------- */
+
+.u-bg-light {
+  background-color: $color-gray-snow;
+}
+
+.u-bg-white {
+  background-color: $color-white;
+}
+
+.u-bg-green {
+  background-color: $color-green;
+}
+
+.u-bg-blue {
+  background-color: $color-blue;
+}
+
+.u-bg-image {
+  background: transparent url(../images/common/bg-image.png) center top repeat;
+
+  @include view-at(sp) {
+    background-image: url(../images/common/bg-image-sp.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

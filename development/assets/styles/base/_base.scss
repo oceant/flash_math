@@ -1,0 +1,50 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "UDデジタル教科書体 M", "UDDigiKyokasho M", sans-serif;
+  font-weight: 300;
+  color: $color-text;
+  font-size: rem(16px);
+  letter-spacing: 0.1em;
+  background-color: $color-base;
+}
+
+a {
+  color: $color-blue;
+  text-decoration: none;
+
+  &:hover {
+    // opacity: 0.7;
+    transition: all .3s;
+  }
+}
+
+p {
+  font-weight: $normal;
+  line-height: 2.2;
+  margin-bottom: 1em;
+
+  @include view-at(sp) {
+    font-size: 16px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.main {
+  padding-top: 80px;
+
+  @include view-at(sp) {
+    padding-top: 51px;
+  }
+}

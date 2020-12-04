@@ -1,0 +1,67 @@
+/* --------------------------
+テキスト装飾
+-------------------------- */
+
+.u-text-accent {
+  color: $color-blue;
+}
+
+.u-text-important {
+  color: $color-red;
+}
+
+.u-text-inverse {
+  color: $color-white;
+}
+
+.u-text-sub {
+  color: $color-gray;
+}
+
+.u-text-green {
+  color: $color-green;
+}
+
+.u-text-bold {
+  font-weight: $bold;
+}
+
+.u-text-normal {
+  font-weight: $normal;
+}
+
+.u-text-highlight {
+  background: linear-gradient(transparent 70%, $color-blue 70%);
+}
+
+.u-text-underline {
+  text-decoration: underline;
+}
+
+.u-text-large {
+  font-size: rem(18px);
+  font-weight: $medium;
+  line-height: 2.2em;
+  letter-spacing: 0.15em;
+}
+
+.u-text-default {
+  font-size: rem(16px);
+  font-weight: $regular;
+  line-height: 2.2em;
+  letter-spacing: 0.15em;
+}
+
+.u-text-small {
+  font-size: rem(14px);
+  font-weight: $regular;
+  line-height: 2em;
+  letter-spacing: 0.15em;
+}
+
+.u-text-x-small {
+  font-size: rem(11px);
+  font-weight: $regular;
+  line-height: 1.8em;
+  letter-spacing: 0.1em;
+}

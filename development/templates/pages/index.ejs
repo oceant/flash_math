@@ -1,0 +1,55 @@
+<%# ページ固有の情報 %>
+<% const templateRoot = '../'; %>
+<% const siteRoot = './'; %>
+<% const meta = {
+    title: '',
+    keywords: '',
+    description: '',
+    canonical: '',
+    ogpImage: ''
+}; %>
+<!doctype html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <%- include(templateRoot + '_include/_head.ejs', {meta: meta ,siteRoot: siteRoot}) %>
+
+    <%# ページ毎のCSS %>
+    <%# /ページ毎のCSS %>
+</head>
+
+<body>
+
+    <section class="main">
+        <%# コンテンツ %>
+        <div class="c-section">
+            <div class="c-section-container">
+                <h1 class="c-h2 u-mb40 u-align-center">フラッシュあんざん</h1>
+                <div id="count" class="flash-count"><div id="countNumber" class="flash-count-inner"></div></div>
+                <div class="c-section-narrow">
+                    <div class="u-align-center" id="startButtonArea">
+                        <a href="#" class="c-button" id="startButton">スタート</a>
+                    </div>
+                    <div class="u-align-center u-hide-pc u-hide-sp" id="answerButtonArea">
+                        <a href="#" class="c-button" id="answerButton">こたえを見る</a>
+                    </div>
+                    <div class="u-align-center u-hide-pc u-hide-sp" id="replayButtonArea">
+                        <a href="#" class="c-button" id="replayButton">もう1回</a>
+                    </div>
+                </div>
+            </div>
+            <div class="u-hide-pc u-hide-sp">1234567890</div>
+        </div>
+        <%# /コンテンツ %>
+    </div>
+
+    <%# 共通JS %>
+    <%- include(templateRoot + '_include/_scripts.ejs', {siteRoot: siteRoot}) %>
+    <%# 共通JS %>
+
+    <%# ページ毎のJS %>
+      <script src="<%= siteRoot %>scripts/flash.js"></script>
+    <%# /ページ毎のJS %>
+
+</body>
+</html>

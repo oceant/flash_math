@@ -1,0 +1,61 @@
+
+/* --------------------------
+media query
+-------------------------- */
+$breakpoints: (
+  'sp': 'screen and (max-width: 767px)',
+  'tab': 'screen and (max-width: 1024px)',
+  'tabonly': 'screen and (min-width: 768px) and (max-width: 1024px)',
+  'laptop': 'screen and (max-width: 1180px)',
+  'mdpi': 'screen and (max-width: 1280px)',
+  'pc': 'screen and (min-width: 1024px)'
+) !default;
+
+@mixin view-at($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* --------------------------
+h with center-line
+-------------------------- */
+@mixin center-line($color: #4f574d, $padding: 30px, $height: 1px) {
+  display: flex;
+  align-items: center;
+
+  &::before,
+  &::after {
+    content: "";
+    flex-grow: 1;
+    height: $height;
+    background: #4f574d;
+    display: block;
+  }
+
+  &::before {
+    margin-right: $padding;
+    @include view-at(sp) {
+      margin-right: $padding / 2;
+    }
+  }
+
+  &::after {
+    margin-left: $padding;
+    @include view-at(sp) {
+      margin-left: $padding / 2;
+    }
+  }
+}
+
+
+$_font-size: (
+  'sp': 14px,
+  'pc': 16px,
+) !default;
+
+@function rem($px: 16px, $key: 'pc') {
+  $value: map-get($_font-size, $key);
+  @return ($px / $value) * 1rem;
+}
+

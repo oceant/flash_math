@@ -1,0 +1,125 @@
+/* --------------------------
+テーブル
+-------------------------- */
+
+.c-table {
+  $border-color: #d5d5d2;
+
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  border-top: 1px solid $border-color;
+  border-left: 1px solid $border-color;
+
+  thead {
+
+    @include view-at(sp) {
+      display: none;
+    }
+    
+    tr {
+      th {
+        text-align: center;
+        padding: 10px 15px;
+        background-color: $color-green-snow;
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+      }
+
+      &.c-table-sub {
+        th {
+          padding: 2px 10px;
+          background-color: $color-green-snow;
+        }
+      }
+    }
+  }
+
+  tbody {
+    th {
+      word-break: keep-all;
+      font-weight: $medium;
+      vertical-align: middle; 
+      padding: 10px 15px;
+      background-color: $color-gray-light;
+      border-right: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+
+      @include view-at(sp) {
+        display: block;
+        width: 100%;
+        line-height: 1;
+        text-align: center;
+        padding: 15px 10px;
+        border-bottom: none;
+      }
+    }
+
+    td {
+      font-weight: $regular;
+      text-align: center;
+      padding: 10px;
+      border-right: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+
+      @include view-at(sp) {
+        display: block;
+        width: 100%;
+        // text-align: right;
+        padding: 15px 10px;
+      }
+
+      // &::before {
+      //   @include view-at(sp) {
+      //     content: attr(data-label);
+      //     display: block;
+      //     width: 50%;
+      //     text-align: left;
+      //     margin-right: 10px;
+      //     float: left;
+      //   }
+      // }
+    }
+  }
+
+  &--border {
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        border-bottom: 1px dotted $border-color;
+
+        th {
+          font-weight: $bold;
+          padding: 20px 30px 20px 0;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px dotted $border-color;
+      }
+
+      th {
+        padding: 20px 0;
+      }
+      td {
+        padding: 20px 0 20px 30px;
+      }
+    }
+  }
+
+  &-col-2 {
+    width: 16.6666666667%;
+  }
+
+  &-col-3 {
+    width: 25%;
+  }
+  
+  &-col-6 {
+    width: 50%;
+  }
+}

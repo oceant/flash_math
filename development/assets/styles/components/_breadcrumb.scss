@@ -1,0 +1,48 @@
+/* --------------------------
+パンくずナビ
+-------------------------- */
+
+.c-breadcrumb {
+  
+  &-list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+
+    @include view-at(sp) {
+      flex-wrap: wrap;
+    }
+
+    li {
+      color: #788084;
+      font-size: rem(11px);
+
+      @include view-at(sp) {
+        line-height: 1.4;
+      }
+
+      &::after {
+        content: '/';
+        padding-right: 0.2em;
+      }
+      
+      &:last-child {
+        &::after {
+          content: '';
+        }
+      }
+
+      &:first-child {
+        a {
+          color: $color-text-light;
+        }
+      }
+
+      a {
+        color: $color-text;
+      }
+    }
+  }
+}

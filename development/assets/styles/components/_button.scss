@@ -1,0 +1,97 @@
+/* --------------------------
+ボタン
+-------------------------- */
+
+.c-button {
+  position: relative;
+  display: inline-block;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  color: $color-white;
+  font-size: rem(20px);
+  font-weight: $medium;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px 30px;
+  background: $color-green;
+  border: 2px solid $color-green;
+  border-radius: 35px;
+  cursor: pointer;
+  margin: 0 auto;
+
+  span {
+    i.fas {
+      padding-left: 0.6em;
+    }
+  }
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-green;
+    opacity: 1;
+
+    span {
+      z-index: 1;
+    }
+  }
+
+  &.green {
+    background: linear-gradient(90deg, $gradient-green-dark 0%, $gradient-green-light 100%);
+
+    &:hover {
+      color: $color-green;
+    }
+  }
+
+  &--small {
+    height: 50px;
+    padding: 10px 30px;
+    border-radius: 25px;
+  }
+
+  &--line {
+    color: $gradient-blue-dark;
+    background: $color-base;
+    border: 2px solid $gradient-blue-dark;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      color: $color-white;
+      background: $gradient-blue-dark;
+    }
+
+    &.white {
+      color: $color-white;
+      border-color: $color-white;
+
+      &:hover {
+        color: $gradient-blue-dark;
+        background: $color-white;
+      }
+    }
+
+    &.gray {
+      color: $color-text-light;
+      border-color: $color-text-light;
+
+      &:hover {
+        color: $color-white;
+        background: $color-text-light;
+      }
+    }
+  }
+
+  &--square {
+    border-radius: 0;
+
+    &::before {
+      border-radius: 0;
+    }
+  }
+}

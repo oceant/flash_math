@@ -1,0 +1,116 @@
+/* --------------------------
+セクション
+-------------------------- */
+
+.c-section {
+  margin: nth($space, 1) 0;
+
+  @include view-at(sp) {
+    margin: nth($space-sp, 1) 0;
+  }
+
+  &-middle {
+    margin: nth($space, 2) 0;
+
+    @include view-at(sp) {
+      margin: nth($space-sp, 2) 0;
+    }
+  }
+
+  &-narrow {
+    margin: nth($space, 3) 0;
+
+    @include view-at(sp) {
+      margin: nth($space-sp, 4) 0;
+    }
+  }
+
+  &-bg {
+    padding: nth($space, 1) 0;
+
+    @include view-at(sp) {
+      padding: nth($space-sp, 1) 0;
+    }
+
+    &-middle {
+      padding: nth($space, 2) 0;
+  
+      @include view-at(sp) {
+        padding: nth($space-sp, 2) 0;
+      }
+    }
+  
+    &-narrow {
+      padding: nth($space, 3) 0;
+  
+      @include view-at(sp) {
+        padding: nth($space-sp, 3) 0;
+      }
+    }
+  
+  }
+
+
+  &-container {
+    width: $contents-width;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 $contents-padding;
+
+    @include view-at(tab) {
+      width: 100%;
+      padding: 0 $contents-padding;
+    }
+
+    @include view-at(sp) {
+      width: 100%;
+      padding: 0 $contents-padding-sp;
+    }
+
+    &-narrow {
+      width: $contents-narrow-width;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 $contents-padding;
+
+      @include view-at(tab) {
+        width: 100%;
+        padding: 0 $contents-padding;
+      }
+
+      @include view-at(sp) {
+        width: 100%;
+        padding: 0 $contents-padding-sp;
+      }
+    }
+
+    &-middle {
+      width: $contents-middle-width;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 $contents-padding;
+
+      @include view-at(tab) {
+        width: 100%;
+        padding: 0 $contents-padding;
+      }
+
+      @include view-at(sp) {
+        width: 100%;
+        padding: 0 $contents-padding-sp;
+      }
+    }
+
+    &-fill {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    &-fill-sp {
+      @include view-at(sp) {
+        padding: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}

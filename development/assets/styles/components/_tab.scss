@@ -1,0 +1,80 @@
+/* --------------------------
+タブ
+-------------------------- */
+
+.c-tab {
+  &-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include view-at(sp) {
+      flex-wrap: wrap;
+      margin: 0 -5px 5px;
+    }
+
+    &-item {
+      flex-grow: 1;
+
+      @include view-at(sp) {
+        width: 50%;
+        padding: 5px;
+      }
+
+      &:last-child {
+        a {
+          border-right: 1px solid $color-gray-light;
+        }
+      }
+
+      a {
+        background-color: $color-gray-snow;
+        border: 1px solid $color-gray-light;
+        border-right: 0;
+        display: block;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        color: $color-black;
+        font-weight: $bold;
+
+        @include view-at(sp) {
+          border-right: 1px solid $color-gray-light;
+        }
+
+        &[aria-selected="true"] {
+          background-color: $color-white;
+          border-bottom: 0;
+          border-top: 2px solid $color-blue;
+          color: $color-black;
+
+          @include view-at(sp) {
+            border: 0;
+            background-color: $color-blue;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  &-contents {
+    &-item {
+      display: none;
+      background-color: $color-white;
+      border: 1px solid $color-gray-light;
+      border-top: 0;
+      padding: 30px;
+
+      @include view-at(sp) {
+        padding: 20px;
+        border-top: 1px solid $color-gray-light;
+      }
+
+      &[aria-hidden="false"] {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+/* --------------------------
+Float解除
+-------------------------- */
+
+.u-clearfix::after {
+    content: "";
+    clear: both;
+    font-size: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+}
