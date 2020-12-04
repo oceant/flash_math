@@ -5,14 +5,10 @@
 .c-form {
   &-text {
     border: 1px solid $color-gray;
-    width: 100%;
-    padding: 0 5px;
-    font-size: rem(15px);
-    line-height: rem(22.5px);
-
-    &--small {
-      width: 100px;
-    }
+    width: 100px;
+    padding: 8px;
+    font-size: rem(18px);
+    border-radius: 8px;
   }
 
   &-textarea {
